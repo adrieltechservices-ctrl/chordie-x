@@ -2,9 +2,6 @@
 
 ChordieX is an elegant, open-source, cross-platform desktop application designed for real-time hardware MIDI chord analysis and sheet music visualization. Built explicitly for musicians, teachers, and producers, it bridges the gap between hardware execution and instant music theory recognition.
 
-![License](https://shields.io)
-![Release](https://shields.io)
-![Platform](https://shields.io)
 
 ---
 
