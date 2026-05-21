@@ -1,7 +1,7 @@
 {
   "name": "chordie-x",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "commonjs",
   "main": "main.js",
   "scripts": {
@@ -27,7 +27,11 @@
       "target": "nsis"
     },
     "mac": {
-      "target": "dmg"
+      "target": "dmg",
+      "arch": [
+        "x64",
+        "arm64"
+      ]
     }
   },
   "dependencies": {
