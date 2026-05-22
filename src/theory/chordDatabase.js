@@ -6,6 +6,14 @@ export const getNoteName = (midiNumber, mode = "sharps") => {
   return mode === "flats" ? FLAT_NAMES[pitchIndex] : SHARP_NAMES[pitchIndex];
 };
 
+export const normalizeIntervals = (intervals) => {
+  return [
+    ...new Set(
+      intervals.map((i) => ((i % 12) + 12) % 12)
+    ),
+  ].sort((a, b) => a - b);
+};
+
 export const CHORD_PROFILES = [
   // --- 1. SINGLETONS, MONOPHONIC & INTEGRITY MARKS ---
   { name: " (Note)", intervals: [0], quality: "Single Note" },
