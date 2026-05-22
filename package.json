@@ -1,7 +1,7 @@
 {
   "name": "chordie-x",
   "private": false,
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "MIDI visualization and chord analysis desktop utility.",
   "author": "Adriel",
   "type": "commonjs",
