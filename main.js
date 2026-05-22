@@ -8,11 +8,21 @@ function createWindow() {
     height: 800,
     title: "ChordieX Workstation",
     autoHideMenuBar: true,
+    // CRITICAL LATENCY FIX: Forces high-priority processing loops
+    backgroundColor: '#18181b', 
     webPreferences: {
       nodeIntegration: false,
-      contextIsolation: true
+      contextIsolation: true,
+      backgroundThrottling: false, // Prevents Mac from slowing down the app when clicking GarageBand
     }
   });
+
+  // Optimize GPU render loops for the vector graphics sheet
+  app.commandLine.appendSwitch('disable-renderer-backgrounding');
+  app.commandLine.appendSwitch('force_high_performance_gpu');
+
+  
+
 
   const devUrl = 'http://localhost:5173';
 
