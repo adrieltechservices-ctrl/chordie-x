@@ -4,9 +4,15 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev
 export default defineConfig({
-  base: './', // <-- THIS IS THE CRITICAL FIX: Forces relative path asset compilation
+  base: './', // Native relative asset pathing
   plugins: [
     react(),
     tailwindcss(),
   ],
+  experimental: {
+    // Zero-dependency fix for Electron's local file protocol (CORS / file:// bypass)
+    renderBuiltUrl(filename) {
+      return './' + filename;
+    }
+  }
 })
